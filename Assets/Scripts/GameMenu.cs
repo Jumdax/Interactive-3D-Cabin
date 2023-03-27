@@ -12,25 +12,13 @@ public class GameMenu : MonoBehaviour
     }
 
     // This function is called every fixed framerate frame, if the MonoBehaviour is enabled
-    private void FixedUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Quit Game");
             Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            //   UnityEditor.EditorApplication.isPlaying = false;
         }
     }
-
-
-    // LateUpdate is called every frame, if the Behaviour is enabled
-    //private void Update()
-    //{
-    //    if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        Debug.Log("Quit Game");
-    //        Application.Quit();
-    //        UnityEditor.EditorApplication.isPlaying = false; 
-    //    }
-    //}
 }
